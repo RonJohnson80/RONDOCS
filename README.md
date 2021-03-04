@@ -197,7 +197,7 @@ The following screenshot displays the result of running `docker ps` after succes
 The playbook is depicted below.
 
 
-(Images/docker_ps_output.png)
+![Docker Ps output](Images/docker_ps_output.png)
 
 Target Machines & Beats
 
@@ -250,7 +250,7 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
 
 
 
-(Images/filebeat_playbook)
+![File beat Playbook](Images/filebeat_playbook)
 
 
 
