@@ -7,9 +7,7 @@ ELK Stack files
 * filebeat-playbook.yml
 
 
-                                                                    (Images/Diagram_azurenetwork.png)
-
-
+![Azure Network Diagram](Images/Diagram_azurenetwork.png)
 
 
 
