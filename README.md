@@ -250,7 +250,7 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
 
 
 
-![File beat Playbook](Images/filebeat_playbook)
+![File beat Playbook](Images/filebeat_playbook.png)
 
 
 
