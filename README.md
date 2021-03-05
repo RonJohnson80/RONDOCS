@@ -68,7 +68,7 @@ Web servers provides secure local connection between VMs through SSH protocol wi
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the uptime and system logs.
 - Filebeat monitors system logs on Virtual Machines 
-- Metricbeat records uptime and system metrics around the performance of the virtual machines 
+- Metricbeat records system metrics around the performance of the virtual machines 
 
 In addition to the above, Azure has provisioned a load balancer in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
 
@@ -102,7 +102,7 @@ The configuration details of each machine may be found below
 ELK Server Configuration
 
 The ELK VM exposes an Elastic Stack instance. Docker is used to download and manage an ELK container.
-Rather than configure ELK manually, we opted to develop a reusable Ansible Playbook to accomplish the task. This playbook is depicted below.
+Rather than configure ELK manually, I developed a reusable Ansible Playbook to accomplish the task. This playbook is depicted below.
 To use this playbook, one must log into the Jump Box, then issue: ansible-playbook (install_elk.yml) elk. This runs the (install_elk.yml) playbook on the elk host.
 
 
@@ -215,7 +215,7 @@ These Beats allow us to collect the following information from each machine:
 
 - Filebeat: Filebeat detects changes to the filesystem. Specifically, we use it to collect Apache logs.
 
-- Metricbeat: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics.
+- Metricbeat: Metricbeat detects changes in system metrics, such as CPU usage.I use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics.
 
 - Packetbeat: Packetbeat collects packets that pass through the NIC, similar to Wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted.Ê
 
@@ -272,7 +272,7 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
 
 Using the Playbooks
 
-In order to use the playbooks, we used a Jump Box with an Ansible control node already configured.Ê
+In order to use the playbooks, I used a Jump Box with an Ansible control node already configured.Ê
 SSH into the control node and follow the steps below:
 
 - Copy the playbooks to the Ansible Control Node
@@ -280,9 +280,9 @@ SSH into the control node and follow the steps below:
 - Run the playbook and navigate to appropriate (VM) targets to check that the installation worked as expected.
 
 
-Answer the following questions to fill in the blanks: _
+The following questions and answers will identify spicific files and how it is used: 
 
-- Which file is the playbook? Where do you copy it? 
+- Which file is the playbook?  
 The yaml (.yml) file is the playbook
 - Which file do you update to make Ansible run the playbook on a specific machine? 
 You must update the host file
