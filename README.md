@@ -3,7 +3,7 @@ Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured below. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 ELK Stack files
-* Êinstall-elk.yml
+* ÃŠinstall-elk.yml
 * filebeat-playbook.yml
 
 
@@ -206,7 +206,7 @@ This ELK server is configured to monitor the following machines:
 - DVWA Web-2: IP 10.0.0.6
 - DVMA-VM2:    IP 10.0.0.7
 
-We have installed the following Beats on these machines:
+I have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat
 - Packetbeat
@@ -217,7 +217,7 @@ These Beats allow us to collect the following information from each machine:
 
 - Metricbeat: Metricbeat detects changes in system metrics, such as CPU usage. We use it to detect SSH login attempts, failed sudo escalations, and CPU/RAM statistics.
 
-- Packetbeat: Packetbeat collects packets that pass through the NIC, similar to Wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted.Ê
+- Packetbeat: Packetbeat collects packets that pass through the NIC, similar to Wireshark. We use it to generate a trace of all activity that takes place on the network, in case later forensic analysis should be warranted.ÃŠ
 
 
 
@@ -245,7 +245,7 @@ These Beats allow us to collect the following information from each machine:
 
 
 
-The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included but looks essentially identical Ñ simply replace metricbeat with filebeat, and it will work as expected.
+The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included but looks essentially identical Ã‘ simply replace metricbeat with filebeat, and it will work as expected.
 
 
 
@@ -272,7 +272,7 @@ The playbook below installs Metricbeat on the target hosts. The playbook for ins
 
 Using the Playbooks
 
-In order to use the playbooks, we used a Jump Box with an Ansible control node already configured.Ê
+In order to use the playbooks, we used a Jump Box with an Ansible control node already configured.ÃŠ
 SSH into the control node and follow the steps below:
 
 - Copy the playbooks to the Ansible Control Node
