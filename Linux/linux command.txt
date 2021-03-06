@@ -1,0 +1,70 @@
+The Jump Box I created with a Ansible container reqires a SSH public key which will be use to configure all other VMs within the network I will be remotely (SSH) connecting to.
+ 
+'ssh-keygen' : command to create ssh key 
+
+
+To start the process of creating my public key I SSH into the Jump Box with the following command:
+
+'ssh sysadmin@<jump box VM IP>'
+
+In order to locate and identify my container I ran the following command while in Jump Box (Gateway VM): 
+
+'sudo docker container list -a'
+
+After Identifying the name of my container I was able to start my container by running the following command:
+
+
+sudo docker start [container-name]
+
+Next I attached my container  as follows:
+
+
+'sudo docker attach [container-name]'
+
+Note: this step identify the host name in the command prompt as an indication you have attached to the container
+
+Here I use the following command to create my ssh public key:
+
+'ssh-keygen'
+
+With no password I saved the key in > (/root/.ssh/id_rsa) file: .ssh/id_rsa.pub 
+
+I then copied the public key and used it as the password as I created and configure each VM in my network.
+
+I use command 'cat ~/.ssh/id_rsa.pub' to reveal my ssh public key for me to copy
+ 
+
+I can now use my Jump Box as a Gateway server; this is required to exicute Linux commands for each related components in my network.
+
+I first created a host text file: nano /etc/ansible/hosts
+
+In this file I created a inventory of servers groups [webservers] and [elk]
+ - Identify them by their IP 
+ - Specify each one with python3 by adding 'ansible_python_interpreter=/usr/bin/python3'
+
+Example:
+
+# /etc/ansible/hosts
+
+
+[webservers]
+ 
+10.0.0.4 ansible_python_interpreter=/usr/bin/python3
+ 
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+ 
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+
+ 
+
+[elk]
+ 
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+  
+
+
+
+
+
+
+
